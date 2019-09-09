@@ -6,19 +6,19 @@ import random
 import string
 import csv
 
-records=50000
+records=10000
 
-def randomStringwithDigitsAndSymbols(stringLength=10):
+def randomStringwithDigitsAndSymbols(stringLength=22):
     """Generate a random string of letters, digits and special characters """
     password_characters = string.ascii_letters + string.digits
     return ''.join(random.choice(password_characters) for i in range(stringLength))
 
 fieldnames=['code']
-writer = csv.DictWriter(open("AlphNum.csv", "w"), fieldnames=fieldnames)
+writer = csv.DictWriter(open("10krec22len.csv", "w"), fieldnames=fieldnames)
 
 code = randomStringwithDigitsAndSymbols()
 
 writer.writerow(dict(zip(fieldnames, fieldnames)))
 for i in range(0, records):
   writer.writerow(dict([
-    ('code', randomStringwithDigitsAndSymbols(6))]))
+    ('code', randomStringwithDigitsAndSymbols(18))]))
