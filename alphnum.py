@@ -1,12 +1,11 @@
-# This file generate code with combination of alphabet and number (upperlowermix)
+# This file generate for earn and burn page as csv file for bulk upload
 # Edit records for amount of records
-# Edit stringLength for the random Length
 
 import random
 import string
 import csv
 
-records=10000
+records=5
 
 def randomStringwithDigitsAndSymbols(stringLength=22):
     """Generate a random string of letters, digits and special characters """
